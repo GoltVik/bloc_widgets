@@ -1,10 +1,10 @@
-library bloc_hooked_widget;
+library bloc_consumer_widget;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-abstract class BlocHookedWidget<B extends BlocBase<S>, S>
+abstract class BlocConsumerWidget<B extends BlocBase<S>, S>
     extends StatelessWidget {
   bool buildWhen(S prev, S next) => true;
 
@@ -16,7 +16,7 @@ abstract class BlocHookedWidget<B extends BlocBase<S>, S>
 
   B? bloc(BuildContext context) => null;
 
-  const BlocHookedWidget({super.key});
+  const BlocConsumerWidget({super.key});
 
   @nonVirtual
   @override

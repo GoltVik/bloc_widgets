@@ -1,10 +1,10 @@
-import 'package:bloc_hooked_widget/bloc_hooked_widget.dart';
+import 'package:bloc_consumer_widget/bloc_consumer_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'test_bloc.dart';
 
-class TestBlocWidget extends BlocHookedWidget<TestBloc, TestState> {
-  TestBlocWidget({Key? key}) : super(key: key);
+class TestBlocWidget extends BlocConsumerWidget<TestBloc, TestState> {
+  const TestBlocWidget({Key? key}) : super(key: key);
 
   @override
   TestBloc? bloc(BuildContext context) => TestBloc();

@@ -1,4 +1,4 @@
-import 'package:bloc_hooked_widget/bloc_hooked_widget.dart';
+import 'package:bloc_consumer_widget/bloc_consumer_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'calculator_bloc.dart';
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends BlocHookedWidget<CalculatorBloc, CalculatorState> {
+class MyHomePage extends BlocConsumerWidget<CalculatorBloc, CalculatorState> {
   const MyHomePage({super.key, required this.title});
 
   final String title;

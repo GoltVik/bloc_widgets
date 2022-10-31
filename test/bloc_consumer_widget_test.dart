@@ -5,7 +5,7 @@ import 'test_bloc_widget.dart';
 
 void main() {
   Widget app() {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Widget tests',
       home: TestBlocWidget(),
     );
