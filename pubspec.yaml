@@ -11,8 +11,6 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc:
-  flutter_hooks:
-  hooked_bloc:
 
 dev_dependencies:
   flutter_test:

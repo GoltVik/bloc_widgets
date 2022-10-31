@@ -13,13 +13,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: MyHomePage(title: 'BlocHookedWidget Demo'),
+      home: const MyHomePage(title: 'BlocHookedWidget Demo'),
     );
   }
 }
 
 class MyHomePage extends BlocHookedWidget<CalculatorBloc, CalculatorState> {
-  MyHomePage({super.key, required this.title});
+  const MyHomePage({super.key, required this.title});
 
   final String title;
 
