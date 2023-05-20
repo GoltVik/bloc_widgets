@@ -4,16 +4,16 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 enum CalculatorEvent { onMount, add, remove, clear }
 
 @immutable
-class CalculatorState {
+class BlocState {
   final int counter;
 
-  const CalculatorState(this.counter);
+  const BlocState(this.counter);
 }
 
-class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
+class CalculatorBloc extends Bloc<CalculatorEvent, BlocState> {
   int _counter = 0;
 
-  CalculatorBloc() : super(const CalculatorState(0)) {
+  CalculatorBloc() : super(const BlocState(0)) {
     on<CalculatorEvent>((event, emit) {
       switch (event) {
         case CalculatorEvent.onMount:
@@ -32,7 +32,7 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
           _counter = 0;
           break;
       }
-      emit.call(CalculatorState(_counter));
+      emit.call(BlocState(_counter));
     });
   }
 }

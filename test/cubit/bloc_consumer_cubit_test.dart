@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'test_bloc_widget.dart';
+import 'test_cubit_widget.dart';
 
 void main() {
   Widget app() {
     return const MaterialApp(
       title: 'Widget tests',
-      home: TestBlocWidget(),
+      home: TestCubitWidget(),
     );
   }
 
