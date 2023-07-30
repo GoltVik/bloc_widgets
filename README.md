@@ -7,14 +7,16 @@ It simplifies the integration of blocs and widgets by extending StatelessWidget,
 
 `BlocConsumerWidget` additionally provides `listenWhen`,`buildWhen`,`listen` methods which `BlocConsumer` is using.    
 `BlocBuilderWidget` additionally provides `buildWhen` method which `BlocBuilder` is using.  
+`BlocListenerWidget` additionally provides `listenWhen` method which `BlocListener` is using.  
 `SelectorWidget` additionally provides `selector` method which `BlocSelector` is using .
 
-Those widgets supports `Bloc` and `Cubit` as well.
+Those widgets support `Bloc` and `Cubit` as well.
 
 ## Features
 
-- Wrapping `BlocBuilder` functionality into `BlocBuilderWidget`
 - Wrapping `BlocConsumer` functionality into `BlocConsumerWidget`
+- Wrapping `BlocBuilder` functionality into `BlocBuilderWidget`
+- Wrapping `BlocListener` functionality into `BlocListenerWidget`
 - Wrapping `BlocSelector` functionality into `BlocSelectorWidget`
 
 ## Installation
@@ -23,7 +25,7 @@ Add `bloc_widgets` as a dependency in your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  bloc_widgets: ^1.0.0
+  bloc_widgets: ^1.0.1
 ```
 
 

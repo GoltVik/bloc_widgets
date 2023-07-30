@@ -14,7 +14,7 @@ class TestBlocBuilderWidget extends BlocBuilderWidget<TestBloc, TestState> {
   });
 
   @override
-  TestBloc? bloc(BuildContext context) => TestBloc();
+  TestBloc bloc(BuildContext context) => TestBloc();
 
   @override
   void onMount(TestBloc bloc) {
@@ -27,7 +27,7 @@ class TestBlocBuilderWidget extends BlocBuilderWidget<TestBloc, TestState> {
   }
 
   @override
-  Widget buildWithState(BuildContext context, TestBloc bloc, TestState state) {
+  Widget build(BuildContext context, TestBloc bloc, TestState state) {
     return Scaffold(
       appBar: AppBar(title: const Text('BlocWidget counter')),
       body: Center(child: Text('Counter: ${state.counter}')),
@@ -64,7 +64,7 @@ class TestBlocConsumerWidget extends BlocConsumerWidget<TestBloc, TestState> {
   });
 
   @override
-  TestBloc? bloc(BuildContext context) => TestBloc();
+  TestBloc bloc(BuildContext context) => TestBloc();
 
   @override
   void onMount(TestBloc bloc) {
@@ -89,7 +89,7 @@ class TestBlocConsumerWidget extends BlocConsumerWidget<TestBloc, TestState> {
   }
 
   @override
-  Widget buildWithState(BuildContext context, TestBloc bloc, TestState state) {
+  Widget build(BuildContext context, TestBloc bloc, TestState state) {
     return Scaffold(
       appBar: AppBar(title: const Text('BlocWidget counter')),
       body: Center(child: Text('Counter: ${state.counter}')),
@@ -120,7 +120,7 @@ class TestBlocSelectorWidget
   const TestBlocSelectorWidget({super.key, this.invokeOnMount = true});
 
   @override
-  TestBloc? bloc(BuildContext context) => TestBloc();
+  TestBloc bloc(BuildContext context) => TestBloc();
 
   @override
   void onMount(TestBloc bloc) {
@@ -128,7 +128,7 @@ class TestBlocSelectorWidget
   }
 
   @override
-  Widget buildWithState(BuildContext context, TestBloc bloc, int state) {
+  Widget build(BuildContext context, TestBloc bloc, int state) {
     return Scaffold(
       appBar: AppBar(title: const Text('BlocWidget counter')),
       body: Center(child: Text('Counter: $state')),
@@ -152,5 +152,5 @@ class TestBlocSelectorWidget
   }
 
   @override
-  int selector(TestBloc cubit, TestState state) => state.counter;
+  int selector(TestState state) => state.counter;
 }

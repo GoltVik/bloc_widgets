@@ -7,13 +7,13 @@ class TestCubitWidget extends BlocConsumerWidget<TestCubit, TestState> {
   const TestCubitWidget({super.key});
 
   @override
-  TestCubit? bloc(BuildContext context) => TestCubit();
+  TestCubit bloc(BuildContext context) => TestCubit();
 
   @override
   void onMount(TestCubit bloc) => bloc.mount();
 
   @override
-  Widget buildWithState(BuildContext context, TestCubit bloc, TestState state) {
+  Widget build(BuildContext context, TestCubit bloc, TestState state) {
     return Scaffold(
       appBar: AppBar(title: const Text('BlocWidget counter')),
       body: Center(child: Text('Counter: ${state.counter}')),

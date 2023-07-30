@@ -1,29 +1,26 @@
-import 'package:flutter/widgets.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+part of 'bloc_widget.dart';
 
-abstract class BlocBuilderWidget<B extends BlocBase<S>, S>
-    extends StatelessWidget {
+abstract class BlocBuilderWidget<B extends BlocBase<S>, S> extends _BlocWidget {
   const BlocBuilderWidget({super.key});
 
   bool buildWhen(S prev, S next) => true;
 
   void onMount(B bloc) {}
 
-  B? bloc(BuildContext context) => null;
+  B bloc(BuildContext context) => context.read<B>();
 
-  @protected
+  Widget build(BuildContext context, B bloc, S state);
+
   @override
-  Widget build(BuildContext context) {
-    final cubit = bloc(context) ?? context.read<B>();
+  Widget _build(BuildContext context) {
+    final cubit = bloc(context);
 
     onMount(cubit);
 
     return BlocBuilder<B, S>(
       bloc: cubit,
       buildWhen: buildWhen,
-      builder: (context, state) => buildWithState(context, cubit, state),
+      builder: (context, state) => build(context, cubit, state),
     );
   }
-
-  Widget buildWithState(BuildContext context, B bloc, S state);
 }
