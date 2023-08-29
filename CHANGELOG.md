@@ -1,3 +1,8 @@
+## 1.1.1
+
+* fixed `BlocWidget` update function issue.
+* `flutter_lints` dependency updated.
+
 ## 1.1.0
 
 * **Breaking change:** method `buildWithState` replaced with more conventional `build` method.

@@ -23,7 +23,7 @@ class _BlocWidgetElement extends ComponentElement {
   Widget build() => (widget as _BlocWidget)._build(this);
 
   @override
-  void update(StatelessWidget newWidget) {
+  void update(Widget newWidget) {
     super.update(newWidget);
     assert(widget == newWidget);
     rebuild(force: true);

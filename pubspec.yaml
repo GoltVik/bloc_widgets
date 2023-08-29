@@ -1,6 +1,6 @@
 name: bloc_widgets
-description: A new Flutter package with BlocWidgets.
-version: 1.1.0
+description: A new Flutter package that provides an alternative to the `BlocBuilder/Listener/Consumer/Selector` with the idea based on the `ConsumerWidget` from `riverpod` library.
+version: 1.1.1
 homepage: https://vgoltstein.dev/
 
 environment:
@@ -15,4 +15,4 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.1
+  flutter_lints: ^2.0.3
