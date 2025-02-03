@@ -25,7 +25,7 @@ Add `bloc_widgets` as a dependency in your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  bloc_widgets: ^1.0.1
+  bloc_widgets: ^1.1.2
 ```
 
 

@@ -1,14 +1,23 @@
 part of 'bloc_widget.dart';
 
+/// Widget implementation of the `BlocBuilder` from the `flutter_bloc`.
+/// use this widget to listen to the changes of the `Bloc` and rebuild the widget.
 abstract class BlocBuilderWidget<B extends BlocBase<S>, S> extends _BlocWidget {
+  /// Main constructor for the `BlocBuilderWidget`.
   const BlocBuilderWidget({super.key});
 
+  /// This method is called when the state changes.
+  /// If it returns `true`, the widget will be rebuilt.
   bool buildWhen(S prev, S next) => true;
 
+  /// Because this is StatelessWidget, you can't use `initState` method.
+  /// You can use this method to perform side effects when the widget is created.
   void onMount(B bloc) {}
 
+  /// This method is used to get the `Bloc` instance.
   B bloc(BuildContext context) => context.read<B>();
 
+  /// Custom build method to build the widget with the `Bloc` and the `state`.
   Widget build(BuildContext context, B bloc, S state);
 
   @override

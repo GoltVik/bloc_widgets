@@ -1,3 +1,7 @@
+## 1.1.2
+
+* `flutter_bloc` dependency updated.
+
 ## 1.1.1
 
 * fixed `BlocWidget` update function issue.
